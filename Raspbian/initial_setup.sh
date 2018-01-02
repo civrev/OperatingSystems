@@ -9,6 +9,7 @@ sudo apt-get -y install git
 sudo apt-get -y install nginx
 sudo apt-get -y install python3-numpy
 sudo apt-get -y install python3-scipy
+sudo apt-get -y install python3-pygame
 sudo apt-get -y install python3-sklearn
 sudo apt-get -y install python3-matplotlib
 sudo apt-get -y install python3-pandas
