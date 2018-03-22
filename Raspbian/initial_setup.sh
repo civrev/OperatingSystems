@@ -16,3 +16,6 @@ sudo apt-get -y install python3-pandas
 sudo apt-get -y install python3-seaborne
 sudo apt-get -y install python3-mysqlconnector
 sudo apt-get -y install python3-sqlalchemy
+
+
+
