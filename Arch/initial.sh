@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #internet
-ip link #show available connections
-dhcpcd 2 #add connection 2, if this doesnt work do same command with the actual name of the interface
+#ip link #show available connections
+#dhcpcd 2 #add connection 2, if this doesnt work do same command with the actual name of the interface
 
 #basic packages
 echo y | pacman -Syu #sys update
