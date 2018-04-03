@@ -59,7 +59,7 @@ cd $HDIR/$PY
 git pull
 grep "depends=('python'" PKGBUILD | grep -o "'[a-zA-Z0-9\-]*'" | grep -o "[a-zA-Z0-9\-]*" > dependencies.txt
 while read p; do
-	git pacman -S $p
+	pacman -S $p
 done < dependencies.txt
 sudo -u nobody makepkg -si
 
