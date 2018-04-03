@@ -61,7 +61,7 @@ grep "depends=('python'" PKGBUILD | grep -o "'[a-zA-Z0-9\-]*'" | grep -o "[a-zA-
 while read p; do
 	echo y | pacman -S $p
 done < dependencies.txt
-sudo -u nobody makepkg -si
+sudo -u nobody makepkg -i
 
 
 #pygame
@@ -75,5 +75,5 @@ grep "depends=('python'" PKGBUILD | grep -o "'[a-zA-Z0-9\-]*'" | grep -o "[a-zA-
 while read p; do
 	echo y | pacman -S $p
 done < dependencies.txt
-sudo -u nobody makepkg -si
+sudo -u nobody makepkg -i
 
