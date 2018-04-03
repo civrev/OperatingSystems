@@ -48,23 +48,32 @@ setfacl -d --set u::rwx,g::rwx,o::- $HDIR
 #will avoid re-cloning git repositories
 #and will only call git pull
 
-#NOTE: This will never be true running this for the first time
-#cloned repositories will never be in THIS repository
-#and are handled by the gitignore
+ARCHGIT="https://aur.archlinux.org"
 
 #keras
-if [ ! -d "$HDIR/python-keras" ]; then
-	git clone https://aur.archlinux.org/python-keras.git $HDIR
+PY="python-keras"
+if [ ! -d "$HDIR/$PY" ]; then
+	git clone $ARCHGIT/$PY.git $HDIR/$PY
 fi
-cd $HDIR/python-keras
+cd $HDIR/$PY
 git pull
+grep "depends=('python'" PKGBUILD | grep -o "'[a-zA-Z0-9\-]*'" | grep -o "[a-zA-Z0-9\-]*" > dependencies.txt
+while read p; do
+	bash pacman -S $p
+done < dependencies.txt
 sudo -u nobody makepkg -si
 
+
 #pygame
-if [ ! -d "$HDIR/python-pygame" ]; then
-	git clone https://aur.archlinux.org/python-pygame.git $HDIR
+PY="python-pygame"
+if [ ! -d "$HDIR/$PY" ]; then
+	git clone $ARCHGIT/$PY.git $HDIR/$PY
 fi
-cd $HDIR/python-pygame
+cd $HDIR/$PY
 git pull
+grep "depends=('python'" PKGBUILD | grep -o "'[a-zA-Z0-9\-]*'" | grep -o "[a-zA-Z0-9\-]*" > dependencies.txt
+while read p; do
+	bash pacman -S $p
+done < dependencies.txt
 sudo -u nobody makepkg -si
 
