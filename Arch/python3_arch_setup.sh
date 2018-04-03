@@ -24,6 +24,7 @@ echo y | pacman -S python-sqlalchemy
 echo y | pacman -S python-statsmodels
 echo y | pacman -S python-seaborn
 echo y | pacman -S python-scikit-learn
+echo y | pacman -S tensorflow
 echo y | pacman -S python-tensorflow
 echo y | pacman -S python-h5py
 
