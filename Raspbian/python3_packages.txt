@@ -1,0 +1,11 @@
+cython
+numpy
+scipy
+pygame
+matplotlib
+pandas
+mysql-connector
+sqlalchemy
+scikit-learn
+h5py
+statsmodels

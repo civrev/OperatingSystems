@@ -1,0 +1,5 @@
+git
+sublime
+pip3
+sloccount
+pylint
