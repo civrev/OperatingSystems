@@ -19,9 +19,13 @@ yes | sudo -H pip3 install seaborne --upgrade
 yes | sudo -H pip3 install mysqlconnector --upgrade
 yes | sudo -H pip3 install pygame --upgrade
 yes | sudo -H pip3 install sqlalchemy --upgrade
+yes | sudo -H pip3 install selenium --upgrade
 
 #build tensorflow from source...
 sudo bash tensorflow.sh
 
 #module that needs tensorflow
 yes | sudo -H pip3 install keras --upgrade
+
+#sublime text
+sudo bash sublime.sh
