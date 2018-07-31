@@ -22,6 +22,8 @@ yes | sudo -H pip install mysqlconnector --upgrade
 yes | sudo -H pip install pygame --upgrade
 yes | sudo -H pip install sqlalchemy --upgrade
 yes | sudo -H pip install selenium --upgrade
+yes | sudo -H pip install django --upgrade
+yes | sudo -H pip install flask --upgrade
 
 #kivy is special...
 yes | sudo add-apt-repository ppa:kivy-team/kivy
@@ -35,3 +37,4 @@ yes | sudo -H pip install keras --upgrade
 
 #sublime text for an IDE
 sudo bash sublime.sh
+

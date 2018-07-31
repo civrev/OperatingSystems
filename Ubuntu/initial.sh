@@ -19,4 +19,7 @@ yes | sudo apt autoremove
 clear
 echo "Done! Ubuntu is now ready."
 
-echo "You'll still need to:\nInstall Eclipse\nDownload Selenium WebDriver jars\nDownload GeckoDriver"
+echo "You still need to manually install and configure:"
+while read line; do
+    echo "$line"
+done < manual_installs.txt

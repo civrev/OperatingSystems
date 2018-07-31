@@ -1,0 +1,5 @@
+Eclipse
+Selenium IDE (Firefox plugin)
+WebDriver (its a maven pom for Java)
+GeckoDriver (mini-server for communicating between firefox and webdriver)
+Sublime 3 extentions
